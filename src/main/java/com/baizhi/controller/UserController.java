@@ -40,9 +40,9 @@ public class UserController {
     public String login(String username,String password,HttpSession session) throws UnsupportedEncodingException {
         log.debug("接收到用戶名:{}, 接收到密碼:{}",username,password);
         try {
-            //1.執行登入業務邏輯
+            //1.登入業務邏輯
             User user = userService.login(username,password);
-            //2.登入成功，保存用戶登記標記
+            //2.登入成功，保存user資料
             session.setAttribute("user",user);
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,13 +1,13 @@
 server:
-  port: 8081 #指定端口
+  port: 8081
   servlet:
-    context-path: /ems-jsp #指定项目名
+    context-path: /ems-jsp #指定項目名
     jsp:
       init-parameters:
-        development: true #开启jsp模板开发模式
+        development: true #開啟jsp模板開發模式
 
 
-# 配置jsp模板
+#配置jsp模板
 spring:
   mvc:
     view:
@@ -25,8 +25,8 @@ mybatis:
   mapper-locations: classpath:com/baizhi/mapper/*.xml
   type-aliases-package: com.baizhi.entity
 
-#配置日志使用
+#配置日誌使用
 logging:
   level:
     root: info
-    com.baizhi: debug #指定包日志
+    com.baizhi: debug

@@ -7,32 +7,32 @@
 
 
 
-    <!--员工列表-->
+    <!--員工列表-->
     <select id="list" resultType="Employee">
         select id,name,birthday,salary,gender from `employee`
     </select>
 
 
 
-    <!--添加员工信息-->
+    <!--添加員工信息-->
     <insert id="add" parameterType="Employee" useGeneratedKeys="true" keyProperty="id">
         insert into `employee` values(#{id},#{name},#{birthday},#{salary},#{gender})
     </insert>
 
 
-    <!--根据id查询一个员工信息-->
+    <!--根據id查詢一位員工信息-->
     <select id="idByEmployee" parameterType="Integer" resultType="Employee">
         select id,name,birthday,salary,gender from `employee`
         where id = #{id}
     </select>
 
-    <!--更新员工信息-->
+    <!--更新員工信息-->
     <update id="update" parameterType="Employee">
         update `employee` set name=#{name},birthday=#{birthday},salary=#{salary},gender=#{gender}
         where id = #{id}
     </update>
 
-    <!--根据id删除员工信息-->
+    <!--根據id刪除員工信息-->
     <delete id="delete" parameterType="Integer">
         delete from `employee` where id=#{id}
     </delete>

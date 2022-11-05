@@ -5,13 +5,13 @@
 
 
 
-    <!--根据用户名查询用户-->
+    <!--根據用戶查詢用戶資料-->
     <select id="findByUserName" parameterType="String" resultType="User">
         select id,username,realname,password,gender from `user`
         where username = #{username}
     </select>
 
-    <!--注册用户-->
+    <!--註冊用戶-->
     <insert id="save" parameterType="User" useGeneratedKeys="true" keyProperty="id">
         insert into `user` values(#{id},#{username},#{realname},#{password},#{gender})
     </insert>
